@@ -5,6 +5,9 @@ import { Link , useHistory } from 'react-router-dom';
 const LoginForm = () => {
 
     const secondNumRef = useRef();
+
+    // 비구조할당 고민해볼것!!
+
     const [name, setName] = useState('');
     const [firstNum, setFirstNum] = useState('');
     const [secondNum, setSecondNum] = useState('');
