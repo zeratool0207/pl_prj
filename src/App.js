@@ -12,7 +12,8 @@ import Spinner from './Spinner';
 function App() {
 
   return (
-    <Trade />
+    // <Trade />
+    <LoginForm />
   )
 
   // return (

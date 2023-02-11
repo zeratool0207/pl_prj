@@ -8,32 +8,66 @@ const LoginForm = () => {
 
     // 비구조할당 고민해볼것!!
 
-    const [name, setName] = useState('');
-    const [firstNum, setFirstNum] = useState('');
-    const [secondNum, setSecondNum] = useState('');
-    const [authNum, setAuthNum] = useState('');
-    const [phone, setPhone] = useState('');
-    const [random, setRandom] = useState('000000');
+    // const [name, setName] = useState('');
+    // const [firstNum, setFirstNum] = useState('');
+    // const [secondNum, setSecondNum] = useState('');
+    // const [authNum, setAuthNum] = useState('');
+    // const [phone, setPhone] = useState('');
+    // const [random, setRandom] = useState('000000');
 
-    const randomNum = () => {
-        setRandom(String(Math.floor(Math.random()*1000000)).padStart(6,"0"));
+    const [inputs, setInputs] = useState({
+        name : '',
+        firstNum: '',
+        secondNum: '',
+        authNum: '',
+        phone: '',
+        random: '000000'
+    });
+
+    const { name, firstNum, secondNum, authNum, phone, random } = inputs;
+
+    const onChange = (e) => {
+        const { name, value } = e.target;
+        setInputs({
+            ...inputs,
+            [name]: value
+        }) 
     }
 
-    const onChangeName = e => {
-        setName(e.target.value);
+    const onReset = () => {
+        setInputs({
+            name : '',
+            firstNum: '',
+            secondNum: '',
+            authNum: '',
+            phone: '',
+            random: '000000',
+        })
     }
 
-    const onChangeSecondNum = e => {
-        setSecondNum(e.target.value);
-    }
 
-    const onChangePhone = e => {
-        setPhone(e.target.value);
-    }
 
-    const onChangeAuthNum = e => {
-        setAuthNum(e.target.value);
-    }
+
+
+    // const randomNum = () => {
+    //     setRandom(String(Math.floor(Math.random()*1000000)).padStart(6,"0"));
+    // }
+
+    // const onChangeName = e => {
+    //     setName(e.target.value);
+    // }
+
+    // const onChangeSecondNum = e => {
+    //     setSecondNum(e.target.value);
+    // }
+
+    // const onChangePhone = e => {
+    //     setPhone(e.target.value);
+    // }
+
+    // const onChangeAuthNum = e => {
+    //     setAuthNum(e.target.value);
+    // }
 
     const authTest = () => {
         let state = true;
@@ -43,12 +77,12 @@ const LoginForm = () => {
         return state;
     }
 
-    const onChangeNum = e => {
-        if (e.target.value.length == 6) {
-            setFirstNum(e.target.value);
-            secondNumRef.current.focus();
-        }
-    }
+    // const onChangeNum = e => {
+    //     if (e.target.value.length == 6) {
+    //         setFirstNum(e.target.value);
+    //         secondNumRef.current.focus();
+    //     }
+    // }
 
     const OPTIONS = [
         { value: "apple", name: "사과" },
@@ -94,14 +128,14 @@ const LoginForm = () => {
             <h2>휴대폰 본인인증</h2>
             <h3>휴대폰 본인인증 필요합니다.</h3>
 
-            <h3>성명: <input type="text" value={name} onChange={onChangeName} placeholder="이름을 입력해주세요" maxLength={5}/></h3>
-            <h3>주민번호: <input type="text" maxLength={6} onChange={onChangeNum} value={firstNum}/> - <input type="text" maxLength={1} ref={secondNumRef} value={secondNum} onChange={onChangeSecondNum}/>XXXXXX</h3>
+            <h3>성명: <input type="text" value={name} name="name" onChange={onChange} placeholder="이름을 입력해주세요" maxLength={5}/></h3>
+            <h3>주민번호: <input type="text" name="firstNum" maxLength={6} onChange={onChange} value={firstNum}/> - <input type="text" name="secondNum" maxLength={1} ref={secondNumRef} value={secondNum} onChange={onChange}/>XXXXXX</h3>
             <h3>휴대폰번호</h3>
             <SelectBox options={OPTIONS} defaultValue="banana"/>  
             
-            <input type="text" value = { phone } onChange={onChangePhone}/>
+            <input type="text" value = { phone } name="phone" onChange={onChange}/>
             <h3>인증번호</h3>
-            <input type="text" value={authNum} onChange = {onChangeAuthNum}/>
+            <input type="text" value={authNum} name="authNum" onChange = {onChange}/>
             <h3>hidden</h3>
             <span>{random}</span>
             {/* 
@@ -113,7 +147,7 @@ const LoginForm = () => {
             </div> */}
             <br />
             <br />
-            <button onClick={ () => randomNum() }>인증하기</button>
+            <button >인증하기</button>
             <button onClick = {() => getCheck() } >테스트하기</button>
             <button onClick = {() => lastCheck()} >마지막 </button>
 
