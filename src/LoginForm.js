@@ -4,6 +4,8 @@ import { Link , useHistory } from 'react-router-dom';
 
 const LoginForm = () => {
 
+    // yarn create react-app hello-react
+
     const secondNumRef = useRef();
 
     // 비구조할당 고민해볼것!!
