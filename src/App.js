@@ -8,24 +8,28 @@ import Product from './components/Product';
 import Trade from './components/Trade';
 import LoginForm from './LoginForm';
 import Spinner from './Spinner';
+import Info from './components/Info';
+import Counter from './components/Counter';
 
 function App() {
 
-  return (
-    // <Trade />
-    <LoginForm />
-  )
-
   // return (
-  //   <BrowserRouter>
-  //     <Header />
-  //     <Routes>
-  //       <Route path="/" element={<Main />}></Route>
-  //       <Route path="/product/:productId" element={<Product />}></Route>
-  //       <Route path="*" element={<NotFound />}></Route>
-  //     </Routes>
-  //   </BrowserRouter>
+  //   // <Trade />
+  //   // <LoginForm />
+  //   // <Info />
+  //   <Counter />
   // )
+
+  return (
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Main />}></Route>
+        <Route path="/product/:productId" element={<Product />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
+      </Routes>
+    </BrowserRouter>
+  )
 
   // return (
   //   <>
