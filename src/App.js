@@ -10,26 +10,31 @@ import LoginForm from './LoginForm';
 import Spinner from './Spinner';
 import Info from './components/Info';
 import Counter from './components/Counter';
+import Test from './Test';
+
 
 function App() {
 
-  // return (
+   return (
   //   // <Trade />
   //   // <LoginForm />
   //   // <Info />
-  //   <Counter />
-  // )
+    //  <Counter />
+    <Test />
 
-  return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Main />}></Route>
-        <Route path="/product/:productId" element={<Product />}></Route>
-        <Route path="*" element={<NotFound />}></Route>
-      </Routes>
-    </BrowserRouter>
-  )
+
+   )
+
+  // return (
+  //   <BrowserRouter>
+  //     <Header />
+  //     <Routes>
+  //       <Route path="/" element={<Main />}></Route>
+  //       <Route path="/product/:productId" element={<Product />}></Route>
+  //       <Route path="*" element={<NotFound />}></Route>
+  //     </Routes>
+  //   </BrowserRouter>
+  // )
 
   // return (
   //   <>
