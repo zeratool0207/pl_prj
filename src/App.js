@@ -11,6 +11,7 @@ import Spinner from './Spinner';
 import Info from './components/Info';
 import Counter from './components/Counter';
 import Test from './Test';
+import LoginNew from './LoginNew';
 
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
   //   // <LoginForm />
   //   // <Info />
     //  <Counter />
-    <Test />
+    // <Test />
+    <LoginNew />
 
 
    )
