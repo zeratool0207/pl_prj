@@ -64,10 +64,66 @@ const LoginNew = () => {
         }
     }
 
+    const [checked, setChecked ]= useState(false);
+    const handleChange = () => {
+        setChecked(!checked);
+    }
+
+
+
     return (
          <>
             <h2>휴대폰 본인인증</h2>
             <h3>휴대폰 본인인증 필요합니다.</h3>
+            <label>
+                <input  
+                    type="checkbox"
+                    checked={checked}
+                    onChange={handleChange}
+                />
+                전체동의
+            </label>
+            {/* 조건부로 보여지게끔  */}
+            { checked &&
+                <div >
+                    {checked.toString()}
+                </div>
+            }
+           
+            
+            {/* <label>
+                <input  
+                    type="checkbox"
+                    checked={checked}
+                    onChange={handleChange}
+                />
+                전체동의
+                <input  
+                    type="checkbox"
+                    checked={checked}
+                    onChange={handleChange}
+                />
+                전체동의
+                <input  
+                    type="checkbox"
+                    checked={checked}
+                    onChange={handleChange}
+                />
+                전체동의
+                <input  
+                    type="checkbox"
+                    checked={checked}
+                    onChange={handleChange}
+                />
+                전체동의
+                <input  
+                    type="checkbox"
+                    checked={checked}
+                    onChange={handleChange}
+                />
+                전체동의
+            </label> */}
+            
 
             <h3>성명: 
                     <input 
