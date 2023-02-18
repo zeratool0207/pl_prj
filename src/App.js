@@ -12,9 +12,13 @@ import Info from './components/Info';
 import Counter from './components/Counter';
 import Test from './Test';
 import LoginNew from './LoginNew';
+import CountUp from './CountUp';
+import './index.css';
 
 
 function App() {
+
+  const endNum = 70000000;
 
    return (
   //   // <Trade />
@@ -22,8 +26,8 @@ function App() {
   //   // <Info />
     //  <Counter />
     // <Test />
-    <LoginNew />
-
+    // <LoginNew />
+    <CountUp start = {0} end = {endNum}/>
 
    )
 
