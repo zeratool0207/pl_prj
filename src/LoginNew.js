@@ -69,7 +69,57 @@ const LoginNew = () => {
         setChecked(!checked);
     }
 
+    const [checkA, setCheckA] = useState(false);
+    const [checkB, setCheckB] = useState(false);
+    const [checkC, setCheckC] = useState(false);
+    const [checkD, setCheckD] = useState(false);
+    const [checkE, setCheckE] = useState(false);
 
+    const onChangeCheckHandler = ( code ) => {
+        switch(code) {
+            case 'a':
+                setCheckA(!checkA)
+                break;
+            case 'b':
+                setCheckB(!checkB)
+                break;
+            case 'c':
+                setCheckC(!checkC)
+                break;
+            case 'd':
+                setCheckD(!checkD)
+                break;
+            case 'e':
+                setCheckE(!checkE)
+                break;
+            default:
+                break;
+        }
+    }
+
+    useEffect( () => {
+        if ( checkA == true && checkB == true && checkC == true && checkD == true && checkE == true ) {
+            setChecked(true);
+        } else {
+            setChecked(false);
+        }
+    }, [checkA, checkB, checkC, checkD, checkE])
+
+    useEffect( () => {
+        if ( checked ) {
+            setCheckA(true);
+            setCheckB(true);
+            setCheckC(true);
+            setCheckD(true);
+            setCheckE(true);
+        } else {
+            setCheckA(false);
+            setCheckB(false);
+            setCheckC(false);
+            setCheckD(false);
+            setCheckE(false);
+        }
+    }, [checked])
 
     return (
          <>
@@ -81,12 +131,47 @@ const LoginNew = () => {
                     checked={checked}
                     onChange={handleChange}
                 />
-                전체동의
+                전체동의 
             </label>
             {/* 조건부로 보여지게끔  */}
-            { checked &&
+            { !checked &&
                 <div >
-                    {checked.toString()}
+                    &nbsp;&nbsp;
+                    <input
+                        type="checkbox"
+                        checked={checkA}
+                        onChange={() => onChangeCheckHandler('a')}
+                    />개인정보수집동의
+                    <br/>
+                    &nbsp;&nbsp;
+                     <input
+                        type="checkbox"
+                        checked={checkB}
+                        onChange={() => onChangeCheckHandler('b')}
+                    />고유식별정보처리동의
+                    <br/>
+                    &nbsp;&nbsp;
+                     <input
+                        type="checkbox"
+                        checked={checkC}
+                        onChange={() => onChangeCheckHandler('c')}
+                    />본인확인 서비스
+                    <br/>
+                    &nbsp;&nbsp;
+                     <input
+                        type="checkbox"
+                        checked={checkD}
+                        onChange={() => onChangeCheckHandler('d')}
+                    />서비스 이용약관 동의
+                    <br/>
+                    &nbsp;&nbsp;
+                     <input
+                        type="checkbox"
+                        checked={checkE}
+                        onChange={() => onChangeCheckHandler('e')}
+                    />개인정보 제3자 제공 동의
+                    <br/>
+                    &nbsp;&nbsp;
                 </div>
             }
            

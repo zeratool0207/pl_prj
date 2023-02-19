@@ -18,7 +18,7 @@ import './index.css';
 
 function App() {
 
-  const endNum = 70000000;
+  //const endNum = 70000000;
 
    return (
   //   // <Trade />
@@ -26,8 +26,8 @@ function App() {
   //   // <Info />
     //  <Counter />
     // <Test />
-    // <LoginNew />
-    <CountUp start = {0} end = {endNum}/>
+    <LoginNew />
+    // <CountUp start = {0} end = {endNum}/>
 
    )
 
