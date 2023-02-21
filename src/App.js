@@ -14,6 +14,7 @@ import Test from './Test';
 import LoginNew from './LoginNew';
 import CountUp from './CountUp';
 import './index.css';
+import DateList from './DateList';
 
 
 function App() {
@@ -26,9 +27,9 @@ function App() {
   //   // <Info />
     //  <Counter />
     // <Test />
-    <LoginNew />
+    // <LoginNew />
     // <CountUp start = {0} end = {endNum}/>
-
+    <DateList />
    )
 
   // return (
