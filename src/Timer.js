@@ -17,7 +17,7 @@ const Timer = () => {
     useEffect( () => {
         if( time.current <= 0 ) {
             console.log('타임 아웃');
-            clearInterval(timeId.current);
+            clearInterval(timerId.current);
         }
     }, [sec]);
 

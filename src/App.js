@@ -15,6 +15,9 @@ import LoginNew from './LoginNew';
 import CountUp from './CountUp';
 import './index.css';
 import DateList from './DateList';
+import Timer from './Timer';
+import PhoneNumber from './PhoneNumber';
+import TimerTwo from './TimerTwo';
 
 
 function App() {
@@ -29,7 +32,9 @@ function App() {
     // <Test />
     // <LoginNew />
     // <CountUp start = {0} end = {endNum}/>
-    <DateList />
+    // <Timer />
+     <TimerTwo />
+    //<PhoneNumber />
    )
 
   // return (
