@@ -18,6 +18,9 @@ import DateList from './DateList';
 import Timer from './Timer';
 import PhoneNumber from './PhoneNumber';
 import TimerTwo from './TimerTwo';
+import Danger from './components/Danger';
+import MuiTest from './components/MuiTest';
+import SignIn from './components/SignIn';
 
 
 function App() {
@@ -33,7 +36,10 @@ function App() {
     // <LoginNew />
     // <CountUp start = {0} end = {endNum}/>
     // <Timer />
-     <TimerTwo />
+    //  <TimerTwo />
+    //  <Danger />
+    //  <MuiTest />
+    <SignIn />
     //<PhoneNumber />
    )
 
