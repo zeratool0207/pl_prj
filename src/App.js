@@ -21,6 +21,7 @@ import TimerTwo from './TimerTwo';
 import Danger from './components/Danger';
 import MuiTest from './components/MuiTest';
 import SignIn from './components/SignIn';
+import LoginTest from './components/LoginTest';
 
 
 function App() {
@@ -39,7 +40,8 @@ function App() {
     //  <TimerTwo />
     //  <Danger />
     //  <MuiTest />
-    <SignIn />
+    // <SignIn />
+    <LoginTest />
     //<PhoneNumber />
    )
 
