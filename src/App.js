@@ -28,33 +28,34 @@ function App() {
 
   //const endNum = 70000000;
 
-   return (
-  //   // <Trade />
-  //   // <LoginForm />
-  //   // <Info />
-    //  <Counter />
-    // <Test />
-    // <LoginNew />
-    // <CountUp start = {0} end = {endNum}/>
-    // <Timer />
-    //  <TimerTwo />
-    //  <Danger />
-    //  <MuiTest />
-    // <SignIn />
-    <LoginTest />
-    //<PhoneNumber />
-   )
+  //  return (
+  // //   // <Trade />
+  // //   // <LoginForm />
+  // //   // <Info />
+  //   //  <Counter />
+  //   // <Test />
+  //   // <LoginNew />
+  //   // <CountUp start = {0} end = {endNum}/>
+  //   // <Timer />
+  //   //  <TimerTwo />
+  //   //  <Danger />
+  //   //  <MuiTest />
+  //   // <SignIn />
+  //   <LoginTest />
+  //   //<PhoneNumber />
+  //  )
 
-  // return (
-  //   <BrowserRouter>
-  //     <Header />
-  //     <Routes>
-  //       <Route path="/" element={<Main />}></Route>
-  //       <Route path="/product/:productId" element={<Product />}></Route>
-  //       <Route path="*" element={<NotFound />}></Route>
-  //     </Routes>
-  //   </BrowserRouter>
-  // )
+  const endNum = 70000000;
+  return (
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<LoginTest />}></Route>
+        <Route path="/loginNew" element={<LoginNew />}></Route>
+        <Route path="/countup" element={<CountUp start = {0} end = {endNum}/>}></Route>
+      </Routes>
+    </BrowserRouter>
+  )
 
   // return (
   //   <>
